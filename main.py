@@ -70,7 +70,7 @@ def process_folder(folder_path):
                 payload = {
                     "model": MODEL,
                     "system": "Du är en strikt summariserande AI. Returnera bara ren text, inga förklaringar, inga hälsningar, inga kommentarer.",
-                    "prompt": f"Beskriv vad detta dokument handlar om och sammanfatta innehållet med högst 500 ord:\n\n{text}",
+                    "prompt": f"Beskriv ingående vad detta dokument handlar om och sammanfatta innehållet med högst 1000 ord:\n\n{text}",
                     "stream": False,
                 }
                 file_type = "text"
@@ -81,7 +81,7 @@ def process_folder(folder_path):
                 payload = {
                     "model": MODEL,
                     "system": "Du är en strikt bildbeskrivande AI. Returnera endast text på svenska, inga kommentarer eller frågor.",
-                    "prompt": "Beskriv ingående vad som syns på denna bild, inklusive eventuell text, med högst 500 ord.",
+                    "prompt": "Beskriv ingående vad som syns på denna bild, inklusive eventuell text, med högst 1000 ord.",
                     "images": [img_base64],
                     "stream": False,
                 }

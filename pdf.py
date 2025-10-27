@@ -41,7 +41,7 @@ def inject_pdf_title(pdf_path, title):
             writer.write(f_out)
         return titled_path
     except Exception as e:
-        print(f"⚠️ Failed to inject title for {pdf_path}: {e}")
+        print(f"Failed to inject title for {pdf_path}: {e}")
         return pdf_path
 
 
